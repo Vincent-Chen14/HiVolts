@@ -19,49 +19,59 @@ class Main(){
     void controller(x){
         char move=x
         //This needs to be typed in consol, use key adapter/listener from swing to get the NEXT key pressed, not typed.
-            if( move == q;){
-                moveValid(board.getPlayerX()-1, board.getPlayerY()-1)
-                //run mohs movement method code
-            }
-            else if( move == w;){
-                moveValid(board.getPlayerX()-1, board.getPlayerY())
-                //run mohs movement method code
-            }
-            else if( move == e;){
-                moveValid(board.getPlayerX()-1, board.getPlayerY()+1)
-                //run mohs movement method code
-            }
-            else if( move == a;){
-                moveValid(board.getPlayerX(), board.getPlayerY()-1)
-                //run mohs movement method code
-            }
-            else if( move == s;){
-                moveValid(board.getPlayerX(), board.getPlayerY())
-                //run mohs movement method code
-            }
-            else if( move == d;){
-                moveValid(board.getPlayerX(), board.getPlayerY()+1)
-                //run mohs movement method code
-            }
-            else if( move == z;){
-                moveValid(board.getPlayerX()+1,board.getPlayerY()-1)
-                //run mohs movement method code
-            }
-            else if( move == x;){
-                moveValid(board.getPlayerX()+1, board.getPlayerY())
-                //run mohs movement method code
-            }
-            else if( move == c;){
-                moveValid(board.getPlayerX()+1, board.getPlayerY()+1)
-                //run mohs movement method code
-            }
-        }
+        if( move == q;){
+            moveValid(board.getPlayerX()-1, board.getPlayerY()-1)
 
-//check if move is valid
+        //run mohs movement method code
+        }
+        else if( move == w;){
+            moveValid(board.getPlayerX()-1, board.getPlayerY())
+
+        //run mohs movement method code
+        }
+        else if( move == e;){
+            moveValid(board.getPlayerX()-1, board.getPlayerY()+1)
+            //run mohs movement method code
+        }
+        else if( move == a;){
+            moveValid(board.getPlayerX(), board.getPlayerY()-1)
+            //run mohs movement method code
+        }
+        else if( move == s;){
+            moveValid(board.getPlayerX(), board.getPlayerY())
+            //run mohs movement method code
+        }
+        else if( move == d;){
+            moveValid(board.getPlayerX(), board.getPlayerY()+1)
+            //run mohs movement method code
+        }
+        else if( move == z;){
+            moveValid(board.getPlayerX()+1,board.getPlayerY()-1)
+            //run mohs movement method code
+        }
+        else if( move == x;){
+            moveValid(board.getPlayerX()+1, board.getPlayerY())
+            //run mohs movement method code
+        }
+        else if( move == c;){
+            moveValid(board.getPlayerX()+1,board.getPlayerY()+1)
+            //run mohs movement method code
+        }
+        else if(move == j;){
+            moveValid()
+            //run mohs movement method code
+        }
+    }
+
+
+//check if move is valid and move
     void moveValid(x, y){
         //if open
         if(Board.getNum(x, y) == 0){
             Board.changePos(x, y, 1)
+            Board.changePos(getPlayerX(), getPlayerY(), 0)
+            Board.changePlayerX(x)
+            Board.changePlayerY(y)
         }
         else{
             alive = false;

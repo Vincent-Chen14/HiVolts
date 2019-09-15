@@ -56,4 +56,6 @@ public class Board{
         public int getPlayerY(){return playerY;}
         public int getNum(int x, int y){return boardMat[x][y];}
         public void changePos(int x, int y, int num){boardMat[x][y] = num;}
+        public void changePlayerX(x){playerX = x;}
+        public void changePlayerY(y){playerY = y;}
     }
