@@ -10,19 +10,51 @@ class Main(){
         while(alive=true){
             //graphics here?
             //run controller method1
-        //endOfGame
+            controller(keyboard.nextChar())
+        //endOfGame, after while loop stops
         }
     }
 
-//controller method
-    void controller{
-        char move=keyboard.nextChar();
+//controller method, move into controller class to save space
+    void controller(x){
+        char move=x
         //This needs to be typed in consol, use key adapter/listener from swing to get the NEXT key pressed, not typed.
             if( move == q;){
                 moveValid(board.getPlayerX()-1, board.getPlayerY()-1)
-
+                //run mohs movement method code
             }
-
+            else if( move == w;){
+                moveValid(board.getPlayerX()-1, board.getPlayerY())
+                //run mohs movement method code
+            }
+            else if( move == e;){
+                moveValid(board.getPlayerX()-1, board.getPlayerY()+1)
+                //run mohs movement method code
+            }
+            else if( move == a;){
+                moveValid(board.getPlayerX(), board.getPlayerY()-1)
+                //run mohs movement method code
+            }
+            else if( move == s;){
+                moveValid(board.getPlayerX(), board.getPlayerY())
+                //run mohs movement method code
+            }
+            else if( move == d;){
+                moveValid(board.getPlayerX(), board.getPlayerY()+1)
+                //run mohs movement method code
+            }
+            else if( move == z;){
+                moveValid(board.getPlayerX()+1,board.getPlayerY()-1)
+                //run mohs movement method code
+            }
+            else if( move == x;){
+                moveValid(board.getPlayerX()+1, board.getPlayerY())
+                //run mohs movement method code
+            }
+            else if( move == c;){
+                moveValid(board.getPlayerX()+1, board.getPlayerY()+1)
+                //run mohs movement method code
+            }
         }
 
 //check if move is valid
@@ -38,7 +70,5 @@ class Main(){
 
         //Main
     public static void main(String[] args){
-
-
         }
 }
