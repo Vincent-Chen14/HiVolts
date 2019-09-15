@@ -1,16 +1,25 @@
-
+import java.util.Random;
+//import javax.swing;
 import java.util.Scanner;//remove later!!
 class Main(){
 //game method
     void runGame{
         Board board=new Board();
         Scanner keyboard=new Scanner(System.in);
+        Random rand = new Random();
         //remove later
         boolean alive=true;
+        boolean jumped=false;
         while(alive=true){
             //graphics here?
             //run controller method1
             controller(keyboard.nextChar())
+            if jumped=false{
+
+                //mohs movement method
+            }
+            jumped = false;
+
         //endOfGame, after while loop stops
         }
     }
@@ -21,45 +30,34 @@ class Main(){
         //This needs to be typed in consol, use key adapter/listener from swing to get the NEXT key pressed, not typed.
         if( move == q;){
             moveValid(board.getPlayerX()-1, board.getPlayerY()-1)
-
-        //run mohs movement method code
         }
         else if( move == w;){
             moveValid(board.getPlayerX()-1, board.getPlayerY())
-
-        //run mohs movement method code
         }
         else if( move == e;){
             moveValid(board.getPlayerX()-1, board.getPlayerY()+1)
-            //run mohs movement method code
         }
         else if( move == a;){
             moveValid(board.getPlayerX(), board.getPlayerY()-1)
-            //run mohs movement method code
         }
         else if( move == s;){
             moveValid(board.getPlayerX(), board.getPlayerY())
-            //run mohs movement method code
         }
         else if( move == d;){
             moveValid(board.getPlayerX(), board.getPlayerY()+1)
-            //run mohs movement method code
         }
         else if( move == z;){
             moveValid(board.getPlayerX()+1,board.getPlayerY()-1)
-            //run mohs movement method code
         }
         else if( move == x;){
             moveValid(board.getPlayerX()+1, board.getPlayerY())
-            //run mohs movement method code
         }
         else if( move == c;){
             moveValid(board.getPlayerX()+1,board.getPlayerY()+1)
-            //run mohs movement method code
         }
         else if(move == j;){
-            moveValid()
-            //run mohs movement method code
+            moveValid(rand.nextInt(9)+1, rand.nextInt(9)+1)
+            jumped = true;
         }
     }
 
