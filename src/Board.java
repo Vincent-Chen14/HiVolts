@@ -58,7 +58,7 @@ public class Board{
         public void changePos(int x, int y, int num){boardMat[x][y] = num;}
         public void changePlayerX(x){playerX = x;}
         public void changePlayerY(y){playerY = y;}
-        public void displayBoard(){
+        public void displayBoard(int number){
             for(int r = 0; i < 12; i++){
                 for(int c = 0; c < 12; c++){
                     if(boardMat[r][c] == 0) {
@@ -73,7 +73,7 @@ public class Board{
                 }
                 System.out.println("");
             }
-            System.out.println("");
+            System.out.println("Number of moves: " + number);
             System.out.println("");
         }
     }

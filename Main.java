@@ -72,14 +72,16 @@ class Main(){
         Mhos mhos = new Mhos();
         Scanner keyboard=new Scanner(System.in);
         Random rand = new Random();
+        int numMoves = 0;
         boolean alive=true;
         boolean jumped=false;
         while(alive=true && mhosDead<12){
-            board.displayBoard();
+            board.displayBoard(numMoves);
             //run controller method1
             if(controller(keyboard.nextChar())){
                 runGame();
             }
+            numMoves++;
             if (jumped=false){
                 mhos.mhoMove();
         //mohs movement method
