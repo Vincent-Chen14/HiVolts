@@ -58,4 +58,22 @@ public class Board{
         public void changePos(int x, int y, int num){boardMat[x][y] = num;}
         public void changePlayerX(x){playerX = x;}
         public void changePlayerY(y){playerY = y;}
+        public void displayBoard(){
+            for(int r = 0; i < 12; i++){
+                for(int c = 0; c < 12; c++){
+                    if(boardMat[r][c] == 0) {
+                        System.out.print(". ");
+                    } else if(boardMat[r][c] == 1) {
+                        System.out.print("| ");
+                    } else if(boardMat[r][c] == 2) {
+                        System.out.print("M ");
+                    } else if(boardMat[r][c] == 3) {
+                        System.out.print("P ");
+                    }
+                }
+                System.out.println("");
+            }
+            System.out.println("");
+            System.out.println("");
+        }
     }
