@@ -7,8 +7,6 @@ class Main(){
         Board board=new Board();
         Scanner keyboard=new Scanner(System.in);
         Random rand = new Random();
-        int numMoves = 0;
-        //remove later
         boolean alive=true;
         boolean jumped=false;
         while(alive=true){
@@ -21,9 +19,8 @@ class Main(){
             }
             jumped = false;
 
-        //endOfGame, after while loop stops
-        numMoves++;
         }
+        //endOfGame, after while loop stops
     }
 
 //controller method, move into controller class to save space
