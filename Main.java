@@ -11,7 +11,7 @@ class Main(){
         boolean alive=true;
         boolean jumped=false;
         while(alive=true){
-            //graphics here?
+            board.displayBoard();
             //run controller method1
             controller(keyboard.nextChar())
             if jumped=false{
