@@ -2,28 +2,6 @@ import java.util.Random;
 //import javax.swing;
 import java.util.Scanner;//remove later!!
 class Main(){
-//game method
-    void runGame{
-        Board board=new Board();
-        Mhos mhos = new Mhos();
-        Scanner keyboard=new Scanner(System.in);
-        Random rand = new Random();
-        int numMoves = 0;
-        boolean alive=true;
-        boolean jumped=false;
-        while(alive=true){
-            board.displayBoard();
-            //run controller method1
-            controller(keyboard.nextChar())
-            if (jumped=false){
-
-                //mohs movement method
-            }
-            jumped = false;
-            numMoves++;
-        }
-        //endOfGame, after while loop stops
-    }
 
 //controller method, move into controller class to save space
     void controller(x){
