@@ -20,6 +20,7 @@ class Main(){
             jumped = false;
         }
         //endOfGame, after while loop stops
+        
     }
 
 //controller method, move into controller class to save space
