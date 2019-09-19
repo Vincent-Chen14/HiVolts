@@ -18,7 +18,6 @@ class Main(){
                 //mohs movement method
             }
             jumped = false;
-
         }
         //endOfGame, after while loop stops
     }
