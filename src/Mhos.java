@@ -16,22 +16,39 @@ public class Mhos {
                     counter++;
     }
     //methods
+    void mhosValid(int i, int posChangeX, int posChangeY){
+        if(boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]==0){
+            boardMat[mhosX[i]][mhosY[i]]=0;
+            boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]=2;
+        }
+        if(boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]==1) {
+            boardMat[mhosX[i]][mhosY[i]] = 0;
+            mhosX[i] = null;
+            mhosY[i] = null;
+        }
+        if(boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]==3) {
+            alive = false
+        }
+    }
     int getMhoX(num){return mhosX[num];}
     int getMhoX(num){return mhosY[num];}
 
     void moveWhere(int x, int y, int i){
         if(x == 0 && y >0){
-            if(boardMat[mhosX[i]][mhosY[i]+1]==0){
-                boardMat[mhosX[i]][mhosY[i]]=0;
-                boardMat[mhosX[i]][mhosY[i]+1]=2;
-            }
-            if(boardMat[mhosX[i]][mhosY[i]+1]==1) {
-                boardMat[mhosX[i]][mhosY[i]] = 0;
-                mhosX[i] = null;
-                mhosY[i] = null;
-            }
+            mhosValid(i, 0, 1)
         }
-        if
+        if(x==0 && y<0){
+            mhosValid(i, 0, -1)
+        }
+        if(x>0 && y==0){
+            mhosValid(i, -1, 0)
+        }
+        if(x<0 && y==0){
+            mhosValid(i, 1, 0)
+        }
+        if(x==y){
+            if(x>0 && y>0)
+        }
 
     }
     void mhoMove(){
