@@ -66,22 +66,26 @@ class Main(){
             //run controller method1
             controller(keyboard.nextChar())
             if (jumped=false){
-                mhos.mhoMove()
+                mhos.mhoMove();
         //mohs movement method
             }
             jumped = false;
         }
         if(mhosDead==12){
-            System.out.println("")
-            System.out.println("YOU WIN, TYPE RESTART TO PLAY AGAIN")
+            System.out.println("");
+            System.out.println("YOU WIN, TYPE 'restart' TO PLAY AGAIN, OTHERWISE, TYPE ANYTHING.");
         }
         else{
-            System.out.println("")
-            System.out.println("YOU LOSE, TYPE RESTART TO PLAY AGAIN")
+            System.out.println("");
+            System.out.println("YOU LOSE, TYPE 'restart' TO PLAY AGAIN, OTHERWISE, TYPE ANYTHING.");
+        }
+        if(keyboard.nextString()==restart){
+        runGame();
         }
     }
 
         //Main
     public static void main(String[] args){
-        }
+        runGame();
+    }
 }

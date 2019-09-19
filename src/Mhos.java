@@ -25,11 +25,10 @@ public class Mhos {
         }
         else if(boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]==1) {
             boardMat[mhosX[i]][mhosY[i]] = 0;
-            mhosX[i] = null;
-            mhosY[i] = null;
+            mhosX[i] = -1;
         }
         else if(boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]==3) {
-            alive = false
+            alive = false;
         }
 
     }
@@ -37,74 +36,63 @@ public class Mhos {
     int getMhoX(num){return mhosY[num];}
 
     void moveWhere(int x, int y, int i){
-        if(x == 0 && y >0){
-            mhosValid(i, 0, 1)
-        }
-        else if(x==0 && y<0){
-            mhosValid(i, 0, -1)
-        }
-        else if(x>0 && y==0){
-            mhosValid(i, -1, 0)
-        }
-        else if(x<0 && y==0){
-            mhosValid(i, 1, 0)
-        }
-        else if(x==y || x == -1 * y){
-            if(x>0 && y>0) {
-                mhosValid(i, -1, 1)
-            }
-            else if(x>0 && y<0) {
-                mhosValid(i, -1, -1)
-            }
-            else if(x<0 && y>0) {
-                mhosValid(i, 1, 1)
-            }
-            else if(x<0 && y<0) {
-                mhosValid(i, 1, -1)
-            }
-        }
-        else{
-            if(x>0 && y>0){
-                if(x>y){
-                    mhosValid(i, -1, 0)
+        if(mhosX[i]!=-1) {
+            if (x == 0 && y > 0) {
+                mhosValid(i, 0, 1);
+            } else if (x == 0 && y < 0) {
+                mhosValid(i, 0, -1);
+            } else if (x > 0 && y == 0) {
+                mhosValid(i, -1, 0);
+            } else if (x < 0 && y == 0) {
+                mhosValid(i, 1, 0);
+            } else if (x == y || x == -1 * y) {
+                if (x > 0 && y > 0) {
+                    mhosValid(i, -1, 1);
+                } else if (x > 0 && y < 0) {
+                    mhosValid(i, -1, -1);
+                } else if (x < 0 && y > 0) {
+                    mhosValid(i, 1, 1);
+                } else if (x < 0 && y < 0) {
+                    mhosValid(i, 1, -1);
                 }
-                else{
-                    mhosValid(i, 0, 1)
-                }
-            }
-            else if(x>0 && y<0){
-                f(x>y){
-                    mhosValid(i, -1, 0)
-                }
-                else{
-                    mhosValid(i, 0, -1)
-                }
-            }
-            else if(x<0 && y>0){
-                f(x>y){
-                    mhosValid(i, 1, 0)
-                }
-                else{
-                    mhosValid(i, 0, 1)
-                }
-            }
-            else if(x<0 && y<0){
-                f(x>y){
-                    mhosValid(i, 1, 0)
-                }
-                else{
-                    mhosValid(i, 0, -1)
+            } else {
+                if (x > 0 && y > 0) {
+                    if (x > y) {
+                        mhosValid(i, -1, 0);
+                    } else {
+                        mhosValid(i, 0, 1);
+                    }
+                } else if (x > 0 && y < 0) {
+                    f(x > y) {
+                        mhosValid(i, -1, 0);
+                    }
+                    else{
+                        mhosValid(i, 0, -1);
+                    }
+                } else if (x < 0 && y > 0) {
+                    f(x > y) {
+                        mhosValid(i, 1, 0);
+                    }
+                    else{
+                        mhosValid(i, 0, 1);
+                    }
+                } else if (x < 0 && y < 0) {
+                    f(x > y) {
+                        mhosValid(i, 1, 0);
+                    }
+                    else{
+                        mhosValid(i, 0, -1);
+                    }
                 }
             }
         }
-
     }
     void mhoMove(){
         //cycles through every mho position
         for(int i = 0; i<12; i++){
             xDiff = board.getPlayerX()-mhosX[i];
             yDiff = board.getPlayerY()-mhosY[i];
-            moveWhere(xDiff, yDiff, i)
+            moveWhere(xDiff, yDiff, i);
         }
 
     }
