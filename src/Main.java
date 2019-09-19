@@ -1,54 +1,52 @@
-import java.util.Random;
-//import javax.swing;
-import java.util.Scanner;//remove later!!
-class Main(){
+import java
+class Main {
 
 //controller method, move into controller class to save space
-    boolean controller(x){
-        char move=x
+    boolean controller(char x){
+        char move=x;
         //This needs to be typed in consol, use key adapter/listener from swing to get the NEXT key pressed, not typed.
-        if( move == q){
+        if( move == 'q'){
             moveValid(board.getPlayerX()-1, board.getPlayerY()-1);
             return false;
         }
-        else if( move == w){
+        else if( move == 'w'){
             moveValid(board.getPlayerX()-1, board.getPlayerY());
             return false;
         }
-        else if( move == e){
+        else if( move == 'e'){
             moveValid(board.getPlayerX()-1, board.getPlayerY()+1);
             return false;
         }
-        else if( move == a){
+        else if( move == 'a'){
             moveValid(board.getPlayerX(), board.getPlayerY()-1);
             return false;
         }
-        else if( move == s){
+        else if( move == 's'){
             moveValid(board.getPlayerX(), board.getPlayerY());
             return false;
         }
-        else if( move == d){
+        else if( move == 'd'){
             moveValid(board.getPlayerX(), board.getPlayerY()+1);
             return false;
         }
-        else if( move == z){
+        else if( move == 'z'){
             moveValid(board.getPlayerX()+1,board.getPlayerY()-1);
             return false;
         }
-        else if( move == x){
+        else if( move == 'x'){
             moveValid(board.getPlayerX()+1, board.getPlayerY());
             return false;
         }
-        else if( move == c){
+        else if( move == 'c'){
             moveValid(board.getPlayerX()+1,board.getPlayerY()+1);
             return false;
         }
-        else if(move == j){
+        else if(move == 'j'){
             moveValid(rand.nextInt(9)+1, rand.nextInt(9)+1);
             jumped = true;
             return false;
         }
-        else if(move == r){
+        else if(move == 'r'){
             return true;
         }
     }
@@ -67,7 +65,7 @@ class Main(){
             alive = false;
         }
     }
-    void runGame{
+    void runGame () {
         Board board=new Board();
         Mhos mhos = new Mhos();
         Scanner keyboard=new Scanner(System.in);
