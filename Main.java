@@ -5,9 +5,9 @@ class Main(){
 //game method
     void runGame{
         Board board=new Board();
+        Mhos mhos = new Mhos();
         Scanner keyboard=new Scanner(System.in);
         Random rand = new Random();
-        //remove later
         boolean alive=true;
         boolean jumped=false;
         while(alive=true){
@@ -19,9 +19,9 @@ class Main(){
                 //mohs movement method
             }
             jumped = false;
-
-        //endOfGame, after while loop stops
         }
+        //endOfGame, after while loop stops
+
     }
 
 //controller method, move into controller class to save space
