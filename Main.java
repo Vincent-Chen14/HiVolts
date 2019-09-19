@@ -7,6 +7,7 @@ class Main(){
         Board board=new Board();
         Scanner keyboard=new Scanner(System.in);
         Random rand = new Random();
+        int numMoves = 0;
         //remove later
         boolean alive=true;
         boolean jumped=false;
@@ -21,6 +22,7 @@ class Main(){
             jumped = false;
 
         //endOfGame, after while loop stops
+        numMoves++;
         }
     }
 
