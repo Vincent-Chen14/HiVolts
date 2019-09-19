@@ -46,8 +46,8 @@ public class Board{
         while(playerTracker<1){
             int playerX = rand.nextInt(9)+1;
             int playerY = rand.nextInt(9)+1;
-            if(boardMat[RowNum][ColNum] == 0){
-                boardMat[RowNum][ColNum] = 3;
+            if(boardMat[playerX][playerY] == 0){
+                boardMat[playerX][playerY] = 3;
                 playerTracker++;}
             }
         }
