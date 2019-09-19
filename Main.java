@@ -4,39 +4,52 @@ import java.util.Scanner;//remove later!!
 class Main(){
 
 //controller method, move into controller class to save space
-    void controller(x){
+    boolean controller(x){
         char move=x
         //This needs to be typed in consol, use key adapter/listener from swing to get the NEXT key pressed, not typed.
         if( move == q){
             moveValid(board.getPlayerX()-1, board.getPlayerY()-1);
+            return false;
         }
         else if( move == w){
             moveValid(board.getPlayerX()-1, board.getPlayerY());
+            return false;
         }
         else if( move == e){
             moveValid(board.getPlayerX()-1, board.getPlayerY()+1);
+            return false;
         }
         else if( move == a){
             moveValid(board.getPlayerX(), board.getPlayerY()-1);
+            return false;
         }
         else if( move == s){
             moveValid(board.getPlayerX(), board.getPlayerY());
+            return false;
         }
         else if( move == d){
             moveValid(board.getPlayerX(), board.getPlayerY()+1);
+            return false;
         }
         else if( move == z){
             moveValid(board.getPlayerX()+1,board.getPlayerY()-1);
+            return false;
         }
         else if( move == x){
             moveValid(board.getPlayerX()+1, board.getPlayerY());
+            return false;
         }
         else if( move == c){
             moveValid(board.getPlayerX()+1,board.getPlayerY()+1);
+            return false;
         }
         else if(move == j){
             moveValid(rand.nextInt(9)+1, rand.nextInt(9)+1);
             jumped = true;
+            return false;
+        }
+        else if(move == r){
+            return true;
         }
     }
 
@@ -64,7 +77,9 @@ class Main(){
         while(alive=true && mhosDead<12){
             board.displayBoard();
             //run controller method1
-            controller(keyboard.nextChar())
+            if(controller(keyboard.nextChar())){
+                runGame();
+            }
             if (jumped=false){
                 mhos.mhoMove();
         //mohs movement method
@@ -73,15 +88,17 @@ class Main(){
         }
         if(mhosDead==12){
             System.out.println("");
-            System.out.println("YOU WIN, TYPE 'restart' TO PLAY AGAIN, OTHERWISE, TYPE ANYTHING.");
+            System.out.println("YOU WIN");
         }
         else{
             System.out.println("");
-            System.out.println("YOU LOSE, TYPE 'restart' TO PLAY AGAIN, OTHERWISE, TYPE ANYTHING.");
+            System.out.println("YOU LOSE");
         }
-        if(keyboard.nextString()==restart){
-        runGame();
+        if(controller(keyboard.nextChar())){
+            runGame();
         }
+
+
     }
 
         //Main
