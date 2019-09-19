@@ -8,6 +8,7 @@ class Main(){
         Mhos mhos = new Mhos();
         Scanner keyboard=new Scanner(System.in);
         Random rand = new Random();
+        int numMoves = 0;
         boolean alive=true;
         boolean jumped=false;
         while(alive=true){
@@ -19,6 +20,7 @@ class Main(){
                 //mohs movement method
             }
             jumped = false;
+            numMoves++;
         }
         //endOfGame, after while loop stops
     }
