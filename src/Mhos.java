@@ -5,6 +5,7 @@ public class Mhos {
         int[] mhosX = new int{12};
         int[] mhosY = new int{12};
         int counter = 0;
+        int mhosDead = 0;
         //sets up the mhos location into two arrays
         int xDiff;
         int yDiff;
@@ -20,6 +21,7 @@ public class Mhos {
         if(boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]==0){
             boardMat[mhosX[i]][mhosY[i]]=0;
             boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]=2;
+            mhosDead++;
         }
         else if(boardMat[mhosX[i]+posChangeX][mhosY[i]+posChangeY]==1) {
             boardMat[mhosX[i]][mhosY[i]] = 0;

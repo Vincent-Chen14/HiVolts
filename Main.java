@@ -2,26 +2,6 @@ import java.util.Random;
 //import javax.swing;
 import java.util.Scanner;//remove later!!
 class Main(){
-//game method
-    void runGame{
-        Board board=new Board();
-        Mhos mhos = new Mhos();
-        Scanner keyboard=new Scanner(System.in);
-        Random rand = new Random();
-        boolean alive=true;
-        boolean jumped=false;
-        while(alive=true){
-            board.displayBoard();
-            //run controller method1
-            controller(keyboard.nextChar())
-            if (jumped=false){
-
-                //mohs movement method
-            }
-            jumped = false;
-        }
-        //endOfGame, after while loop stops
-    }
 
 //controller method, move into controller class to save space
     void controller(x){
@@ -72,6 +52,32 @@ class Main(){
         }
         else{
             alive = false;
+        }
+    }
+    void runGame{
+        Board board=new Board();
+        Mhos mhos = new Mhos();
+        Scanner keyboard=new Scanner(System.in);
+        Random rand = new Random();
+        boolean alive=true;
+        boolean jumped=false;
+        while(alive=true && mhosDead<12){
+            board.displayBoard();
+            //run controller method1
+            controller(keyboard.nextChar())
+            if (jumped=false){
+                mhos.mhoMove()
+        //mohs movement method
+            }
+            jumped = false;
+        }
+        if(mhosDead==12){
+            System.out.println("")
+            System.out.println("YOU WIN, TYPE RESTART TO PLAY AGAIN")
+        }
+        else{
+            System.out.println("")
+            System.out.println("YOU LOSE, TYPE RESTART TO PLAY AGAIN")
         }
     }
 
